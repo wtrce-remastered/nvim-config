@@ -7,12 +7,16 @@ return {
         "MunifTanjim/nui.nvim",
     },
     lazy = false,
-    opts = {},
+    opts = {
+    },
     config = function()
         vim.keymap.set("n", "<leader>ff", ":Neotree toggle filesystem<CR>", {})
-        vim.keymap.set("n", "<leader>fg", ":Neotree focus git_status<CR>", {})
+        vim.keymap.set("n", "<leader>fx", ":Neotree focus filesystem float<CR>", {})
 
         require("neo-tree").setup({
+            window = {
+                position = "float"
+            },
             filesystem = {
                 window = {
                     mappings = {
@@ -22,6 +26,9 @@ return {
                         [";"] = "open",
                     },
                 },
+                filtered_items = {
+                    visible = true
+                }
             },
         })
     end,
