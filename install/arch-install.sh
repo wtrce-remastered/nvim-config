@@ -1,7 +1,10 @@
 #!/usr/bin/sh
 
 # install needed packages
-sudo pacman -S --needed --noconfirm git tmux nvim vim gcc openssh wget man-db jdk21-openjdk zip unzip python ripgrep
+sudo pacman -S --needed --noconfirm git nvim gcc zip unzip python ripgrep wl-clipboard
+
+# for java
+# sudo pacman -S --needed --noconfirm jdk21-openjdk
 
 if [ -d "~/.config/nvim" ]; then
     mv -f ~/.config/nvim ~/.var/nvim-config-backup
