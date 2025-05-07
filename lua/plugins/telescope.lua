@@ -16,11 +16,29 @@ return {
             local telescope = require('telescope')
 
             telescope.setup({
+                defaults = {
+                    file_ignore_patterns = {
+                        "node_modules",
+                        ".git",
+                        "dist",
+                        "build",
+                        "%.o$",
+                        "%.class$"
+                    },
+                    mappings = {
+                        n = {
+                            ['k'] = require('telescope.actions').move_selection_next,
+                            ['l'] = require('telescope.actions').move_selection_previous,
+                            [';'] = require('telescope.actions').select_default,
+                        }
+                    }
+
+                },
                 extensions = {
                     ['ui-select'] = {
                         require('telescope.themes').get_dropdown {}
                     }
-                }
+                },
             })
 
             telescope.load_extension('ui-select')
