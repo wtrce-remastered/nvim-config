@@ -26,9 +26,6 @@ return {
             )
 
             vim.lsp.enable("lua_ls")
-
-            vim.lsp.enable("eslint")
-            vim.lsp.enable("ts_ls")
         end,
     },
     { "hrsh7th/cmp-nvim-lsp" },
