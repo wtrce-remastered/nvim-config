@@ -7,8 +7,7 @@ return {
         "MunifTanjim/nui.nvim",
     },
     lazy = false,
-    opts = {
-    },
+    opts = {},
     config = function()
         vim.keymap.set("n", "<leader>fx", ":Neotree focus filesystem float<CR>")
 
@@ -30,10 +29,18 @@ return {
             end
         end, { noremap = true })
 
-        require("neo-tree").setup({
+        require('neo-tree').setup({
             enable_git_status = false,
+            event_handlers = {
+                {
+                    event = "neo_tree_buffer_enter",
+                    handler = function()
+                        vim.cmd [[setlocal relativenumber]]
+                    end,
+                }
+            },
             window = {
-                position = "float",
+                position = "float"
             },
             buffers = {
                 follow_current_file = {
@@ -44,15 +51,11 @@ return {
                         ["/"] = false,
                         ["z"] = false,
                         ["<C-f>"] = false,
-                    },
+                    }
                 },
             },
             filesystem = {
                 use_libuv_file_watcher = true,
-                hijack_netrw_behavior = "open_current",
-                follow_current_file = {
-                    enabled = true
-                },
                 window = {
                     mappings = {
                         ["j"] = "close_node",
@@ -64,7 +67,7 @@ return {
                         ["z"] = false,
                         ["<C-f>"] = false,
                         ["f"] = false,
-                    },
+                    }
                 },
                 filtered_items = {
                     visible = true,
@@ -73,14 +76,6 @@ return {
                     }
                 },
             },
-        })
-
-        vim.api.nvim_create_autocmd('BufEnter', {
-            pattern = 'neo-tree*',
-            callback = function()
-                vim.wo.number = true
-                vim.wo.relativenumber = true
-            end,
         })
     end,
 }
