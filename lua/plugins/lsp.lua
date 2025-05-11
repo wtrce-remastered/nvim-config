@@ -25,7 +25,7 @@ return {
                 require("cmp_nvim_lsp").default_capabilities()
             )
 
-            vim.lsp.enable("lua_ls")
+            lspconfig.lua_ls.setup({})
         end,
     },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -80,6 +80,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 automatic_enable = true,
+                ensure_installed = { "lua_ls" }
             })
         end,
     },

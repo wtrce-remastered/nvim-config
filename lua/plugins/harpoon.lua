@@ -1,16 +1,20 @@
 return {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
     config = function()
         local harpoon = require("harpoon")
 
         harpoon:setup()
 
-        vim.keymap.set("n", "<leader>ja", function() harpoon:list():add() end)
+        vim.keymap.set("n", "<leader>je", function() harpoon:list():replace_at(1) end)
+        vim.keymap.set("n", "<leader>js", function() harpoon:list():replace_at(2) end)
+        vim.keymap.set("n", "<leader>jf", function() harpoon:list():replace_at(3) end)
+
+        vim.keymap.set("n", "<leader>jm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
         vim.keymap.set("n", "<leader>jr", function() harpoon:list():remove() end)
         vim.keymap.set("n", "<leader>jclr", function() harpoon:list():clear() end)
-        vim.keymap.set("n", "<leader>jm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
         vim.keymap.set("n", "<C-e>", function() harpoon:list():select(1) end)
         vim.keymap.set("n", "<C-s>", function() harpoon:list():select(2) end)
@@ -22,5 +26,5 @@ return {
         vim.keymap.set("n", "<leader>8", function() harpoon:list():select(8) end)
         vim.keymap.set("n", "<leader>9", function() harpoon:list():select(9) end)
         vim.keymap.set("n", "<leader>0", function() harpoon:list():select(0) end)
-   end
+    end
 }
