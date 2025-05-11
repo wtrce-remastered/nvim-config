@@ -9,12 +9,11 @@ return {
             vim.keymap.set('n', '<leader>fp', builtin.find_files, {})
             vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
 
-
             vim.keymap.set('n', '<leader>gr', builtin.lsp_references)
 
             vim.keymap.set('n', '<leader>gd', builtin.lsp_definitions)
             vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration)
-            vim.keymap.set('n', '<leader>gi', builtin.lsp_implementations)
+            vim.keymap.set('n', '<leader>gg', builtin.lsp_implementations)
             vim.keymap.set('n', '<leader>gy', builtin.lsp_type_definitions)
 
             vim.keymap.set('n', '<leader>ge', builtin.diagnostics)
