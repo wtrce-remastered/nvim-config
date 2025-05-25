@@ -61,6 +61,9 @@ vim.keymap.set('n', '<C-w>k', '<C-w>J', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>l', '<C-w>K', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>;', '<C-w>L', { noremap = true, silent = true })
 
+vim.keymap.set('n', 'K', '4j')
+vim.keymap.set('n', 'L', '4k')
+
 vim.keymap.set('n', '<leader>w', ':close<CR>')
 
 vim.keymap.set('n', '<leader>t', function()
