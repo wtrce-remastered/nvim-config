@@ -59,8 +59,6 @@ return {
                 window = {
                     mappings = {
                         ["j"] = "close_node",
-                        ["k"] = "move_cursor_down",
-                        ["l"] = "move_cursor_up",
                         [";"] = "open",
                         -- disabled
                         ["/"] = false,

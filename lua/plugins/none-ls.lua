@@ -6,8 +6,7 @@ return {
         nullls.setup({
             sources = {
                 nullls.builtins.formatting.stylua,
-                nullls.builtins.formatting.prettier,
-                nullls.builtins.formatting.eslint,
+                nullls.builtins.formatting.prettier
             },
         })
 
