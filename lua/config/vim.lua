@@ -35,8 +35,8 @@ vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 'j', { noremap = true })
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'k', { noremap = true })
 vim.keymap.set({ 'n', 's', 'v', 'o' }, ';', 'l', { noremap = true })
 
-vim.keymap.set('v', 'K', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'L', ":m '>-2<CR>gv=gv")
+-- vim.keymap.set('v', 'K', ":m '>+1<CR>gv=gv")
+-- vim.keymap.set('v', 'L', ":m '>-2<CR>gv=gv")
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
