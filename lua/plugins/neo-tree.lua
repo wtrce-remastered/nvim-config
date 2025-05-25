@@ -48,9 +48,9 @@ return {
                 },
                 window = {
                     mappings = {
-                        ["/"] = false,
-                        ["z"] = false,
-                        ["<C-f>"] = false,
+                        ["/"] = "noop",
+                        ["z"] = "noop",
+                        ["<C-f>"] = "noop",
                     }
                 },
             },
@@ -60,11 +60,12 @@ return {
                     mappings = {
                         ["j"] = "close_node",
                         [";"] = "open",
+                        ["l"] = "noop",
                         -- disabled
-                        ["/"] = false,
-                        ["z"] = false,
-                        ["<C-f>"] = false,
-                        ["f"] = false,
+                        ["/"] = "noop",
+                        ["z"] = "noop",
+                        ["<C-f>"] = "noop",
+                        ["f"] = "noop",
                     }
                 },
                 filtered_items = {
