@@ -27,8 +27,8 @@ vim.cmd('set textwidth=140')
 
 vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
 
-vim.keymap.set('i', 'lk', '<Esc>', { noremap = true })
-vim.keymap.set('t', 'lk', '<C-\\><C-n>', { noremap = true })
+vim.keymap.set('i', '<C-l>', '<Esc>', { noremap = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 
 vim.keymap.set({ 'n', 's', 'v', 'o' }, 'j', "h", { noremap = true })
 vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 'j', { noremap = true })
@@ -51,10 +51,10 @@ vim.keymap.set('n', '<leader>Y', "\"+Y")
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
 
-vim.keymap.set('n', '<Left>', ':wincmd h<CR>', {silent = true})
-vim.keymap.set('n', '<Down>', ':wincmd j<CR>', {silent = true})
-vim.keymap.set('n', '<Up>', ':wincmd k<CR>', {silent = true})
-vim.keymap.set('n', '<Right>', ':wincmd l<CR>', {silent = true})
+vim.keymap.set('n', '<Left>', ':wincmd h<CR>', { silent = true })
+vim.keymap.set('n', '<Down>', ':wincmd j<CR>', { silent = true })
+vim.keymap.set('n', '<Up>', ':wincmd k<CR>', { silent = true })
+vim.keymap.set('n', '<Right>', ':wincmd l<CR>', { silent = true })
 
 vim.keymap.set('n', '<C-w>j', '<C-w>H', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>k', '<C-w>J', { noremap = true, silent = true })
