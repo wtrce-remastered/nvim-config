@@ -26,6 +26,7 @@ return {
             )
 
             lspconfig.lua_ls.setup({})
+            lspconfig.postgres_ls.setup({})
         end,
     },
     { "hrsh7th/cmp-nvim-lsp" },
