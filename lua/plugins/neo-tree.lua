@@ -40,12 +40,9 @@ return {
                 }
             },
             window = {
-                position = "float"
+                position = "float",
             },
             buffers = {
-                follow_current_file = {
-                    enabled = true
-                },
                 window = {
                     mappings = {
                         ["/"] = "noop",
@@ -56,12 +53,14 @@ return {
             },
             filesystem = {
                 use_libuv_file_watcher = true,
+                group_empty_dirs = true,
+                scan_mode = "deep",
                 window = {
                     mappings = {
                         ["j"] = "close_node",
                         [";"] = "open",
-                        ["l"] = "noop",
                         -- disabled
+                        ["l"] = "noop",
                         ["/"] = "noop",
                         ["z"] = "noop",
                         ["<C-f>"] = "noop",
@@ -71,7 +70,12 @@ return {
                 filtered_items = {
                     visible = true,
                     never_show = {
-                        ".git"
+                        ".git",
+                        ".settings",
+                        ".classpath",
+                        ".project",
+                        ".idea",
+                        ".vscode"
                     }
                 },
             },
