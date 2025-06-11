@@ -28,6 +28,9 @@ vim.cmd('set textwidth=140')
 
 vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
 
+vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true })
+vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true })
+
 vim.keymap.set('i', '<C-l>', '<Esc>', { noremap = true })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 
