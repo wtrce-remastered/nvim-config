@@ -9,7 +9,8 @@ return {
     lazy = false,
     opts = {},
     config = function()
-        vim.keymap.set("n", "<leader>fx", ":Neotree focus filesystem float<CR>")
+        vim.keymap.set("n", "<leader>fx", ":Neotree focus filesystem float<cr>")
+        vim.keymap.set("n", "<C-.>", ":Neotree ../<cr>")
 
         local function is_neotree_visible()
             for _, win in ipairs(vim.api.nvim_list_wins()) do

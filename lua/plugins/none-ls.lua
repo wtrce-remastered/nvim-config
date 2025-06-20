@@ -10,6 +10,6 @@ return {
             },
         })
 
-        vim.keymap.set("n", "<leader>=", vim.lsp.buf.format)
+        vim.keymap.set("n", "<C-\\>", '<cmd>lua vim.lsp.buf.format()<cr>:w<cr>')
     end,
 }

@@ -41,6 +41,9 @@ return {
                 sources = {
                     { name = "nvim_lsp" },
                 },
+                completion = {
+                    autocomplete = false
+                },
                 mapping = cmp.mapping.preset.insert({
                     ["<C-n>"] = cmp.mapping.complete({}),
                     ["<Tab>"] = cmp.mapping(function(fallback)

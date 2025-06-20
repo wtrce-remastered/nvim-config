@@ -30,7 +30,6 @@ return {
                 return true
             end
 
-
             local telescope = require('telescope')
 
             telescope.setup({
@@ -49,6 +48,15 @@ return {
                             ['k'] = require('telescope.actions').move_selection_next,
                             ['l'] = require('telescope.actions').move_selection_previous,
                             [';'] = require('telescope.actions').select_default,
+                        },
+                        i = {
+                            ['<C-l>'] = function()
+                                vim.api.nvim_feedkeys(
+                                    vim.api.nvim_replace_termcodes('<Esc>', true, false, true),
+                                    'n',
+                                    false
+                                )
+                            end,
                         }
                     }
 
@@ -83,4 +91,3 @@ return {
         end
     }
 }
-
