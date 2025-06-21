@@ -24,13 +24,15 @@ vim.cmd('set incsearch')
 
 vim.cmd('set textwidth=140')
 
+vim.cmd('set conceallevel=2')
+
 -- remap
 
 vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
 
-vim.keymap.set('n', '<C-2>', ':w<cr>', { noremap = true })
-vim.keymap.set('n', '<C-3>', ':wq<cr>', { noremap = true })
-vim.keymap.set('n', '<C-4>', ':q!<cr>', { noremap = true })
+vim.keymap.set('n', '<C-j>', ':w<cr>', { noremap = true })
+vim.keymap.set('n', '<C-h>', ':wq<cr>', { noremap = true })
+vim.keymap.set('n', '<C-l>', ':q!<cr>', { noremap = true })
 
 vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true })
