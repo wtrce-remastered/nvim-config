@@ -44,13 +44,13 @@ return {
                     },
                     mappings = {
                         n = {
-                            ['j'] = require('telescope.actions').close,
-                            ['k'] = require('telescope.actions').move_selection_next,
-                            ['l'] = require('telescope.actions').move_selection_previous,
-                            [';'] = require('telescope.actions').select_default,
+                            ['h'] = require('telescope.actions').close,
+                            ['j'] = require('telescope.actions').move_selection_next,
+                            ['k'] = require('telescope.actions').move_selection_previous,
+                            ['l'] = require('telescope.actions').select_default,
                         },
                         i = {
-                            ['<C-l>'] = function()
+                            ['<C-k>'] = function()
                                 vim.api.nvim_feedkeys(
                                     vim.api.nvim_replace_termcodes('<Esc>', true, false, true),
                                     'n',

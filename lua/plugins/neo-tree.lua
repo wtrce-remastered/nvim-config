@@ -58,10 +58,10 @@ return {
                 scan_mode = "deep",
                 window = {
                     mappings = {
-                        ["j"] = "close_node",
-                        [";"] = "open",
+                        ["h"] = "close_node",
+                        ["l"] = "open",
                         -- disabled
-                        ["l"] = "noop",
+                        ["k"] = "noop",
                         ["/"] = "noop",
                         ["z"] = "noop",
                         ["<C-f>"] = "noop",

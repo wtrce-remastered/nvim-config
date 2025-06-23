@@ -30,26 +30,26 @@ vim.cmd('set conceallevel=2')
 
 vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
 
-vim.keymap.set('n', '<C-j>', ':w<cr>', { noremap = true })
-vim.keymap.set('n', '<C-h>', ':wq<cr>', { noremap = true })
-vim.keymap.set('n', '<C-l>', ':q!<cr>', { noremap = true })
+vim.keymap.set('n', '<C-h>', ':w<cr>', { noremap = true })
+vim.keymap.set('n', '<C-g>', ':wq<cr>', { noremap = true })
+vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true })
 
 vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true })
 
-vim.keymap.set('i', '<C-l>', '<Esc>', { noremap = true })
+vim.keymap.set('i', '<C-k>', '<Esc>', { noremap = true })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 
-vim.keymap.set({ 'n', 's', 'v', 'o' }, 'j', "h", { noremap = true })
-vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 'j', { noremap = true })
-vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'k', { noremap = true })
-vim.keymap.set({ 'n', 's', 'v', 'o' }, ';', 'l', { noremap = true })
-
+-- vim.keymap.set({ 'n', 's', 'v', 'o' }, 'j', "h", { noremap = true })
+-- vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 'j', { noremap = true })
+-- vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'k', { noremap = true })
+-- vim.keymap.set({ 'n', 's', 'v', 'o' }, ';', 'l', { noremap = true })
+--
 -- vim.keymap.set('v', 'K', ":m '>+1<CR>gv=gv")
 -- vim.keymap.set('v', 'L', ":m '>-2<CR>gv=gv")
 
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
+-- vim.keymap.set('n', '<C-d>', '<C-d>zz')
+-- vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
@@ -66,13 +66,13 @@ vim.keymap.set('n', '<Down>', ':wincmd j<CR>', { silent = true })
 vim.keymap.set('n', '<Up>', ':wincmd k<CR>', { silent = true })
 vim.keymap.set('n', '<Right>', ':wincmd l<CR>', { silent = true })
 
-vim.keymap.set('n', '<C-w>j', '<C-w>H', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>k', '<C-w>J', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>l', '<C-w>K', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>;', '<C-w>L', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>h', '<C-w>H', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>j', '<C-w>J', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>k', '<C-w>K', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>l', '<C-w>L', { noremap = true, silent = true })
 
-vim.keymap.set('n', 'K', '4j')
-vim.keymap.set('n', 'L', '4k')
+vim.keymap.set('n', 'J', '4j')
+vim.keymap.set('n', 'K', '4k')
 
 vim.keymap.set('n', '<leader>w', ':close<CR>')
 
