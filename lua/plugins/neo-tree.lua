@@ -47,8 +47,9 @@ return {
                 window = {
                     mappings = {
                         ["/"] = "noop",
+                        ["?"] = "noop",
                         ["z"] = "noop",
-                        ["<C-f>"] = "noop",
+                        ["<C-f>"] = "noop"
                     }
                 },
             },
@@ -66,6 +67,7 @@ return {
                         ["z"] = "noop",
                         ["<C-f>"] = "noop",
                         ["f"] = "noop",
+                        ["s"] = "noop",
                     }
                 },
                 filtered_items = {
