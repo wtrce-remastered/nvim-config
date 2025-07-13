@@ -26,9 +26,6 @@ return {
             )
 
             lspconfig.lua_ls.setup({})
-            lspconfig.bashls.setup({})
-            lspconfig.buf_ls.setup({})
-            lspconfig.gradle_ls.setup({})
         end,
     },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -40,9 +37,6 @@ return {
             cmp.setup({
                 sources = {
                     { name = "nvim_lsp" },
-                },
-                completion = {
-                    autocomplete = false
                 },
                 mapping = cmp.mapping.preset.insert({
                     ["<C-n>"] = cmp.mapping.complete({}),

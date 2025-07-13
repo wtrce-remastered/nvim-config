@@ -26,6 +26,8 @@ vim.cmd('set textwidth=140')
 
 vim.cmd('set conceallevel=2')
 
+vim.opt.cursorline = true
+
 -- remap
 
 vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
@@ -33,6 +35,8 @@ vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
 vim.keymap.set('n', '<C-h>', ':w<cr>', { noremap = true })
 vim.keymap.set('n', '<C-g>', ':wq<cr>', { noremap = true })
 vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true })
+
+vim.keymap.set('n', '<C-n>', '_hvk$d')
 
 vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true })
@@ -52,8 +56,8 @@ vim.keymap.set('t', '<C-k>', '<C-\\><C-n>', { noremap = true })
 -- vim.keymap.set('n', '<C-d>', '<C-d>zz')
 -- vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
+-- vim.keymap.set('n', 'n', 'nzzzv')
+-- vim.keymap.set('n', 'N', 'Nzzzv')
 
 vim.keymap.set('x', '<leader>p', "\"_dP")
 
@@ -92,3 +96,9 @@ vim.keymap.set('n', '<leader>rr', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set('n', '<leader>ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 
 vim.keymap.set('n', '<leader>gl', function() vim.diagnostic.open_float({ scope = 'cursor' }) end)
+
+-- gradle
+
+vim.keymap.set('n', 'grlb', ':!gradle clean build<cr>')
+vim.keymap.set('n', 'grlpm', ':!gradle publishToMavenLocal<cr>')
+vim.keymap.set('n', 'grlpp', ':!gradle generateProto<cr>')

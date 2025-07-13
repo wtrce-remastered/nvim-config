@@ -10,5 +10,8 @@ return {
         })
 
         vim.cmd('colorscheme github_dark')
+
+        vim.api.nvim_set_hl(0, "CursorLineNR", { fg = "white" })
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
     end,
 }
