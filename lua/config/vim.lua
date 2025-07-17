@@ -34,18 +34,21 @@ vim.opt.cursorline = true
 
 vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
 
-vim.keymap.set('n', '<C-h>', ':w<cr>', { noremap = true })
-vim.keymap.set('n', '<C-g>', ':wq<cr>', { noremap = true })
-vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true })
+vim.keymap.set('n', 'H', ':bprevious<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', 'L', ':bnext<cr>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<C-h>', ':w<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-g>', ':wq<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-n>', '_hvk$d')
 
-vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true })
-vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true })
+vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true, silent = true })
 
-vim.keymap.set('i', '<C-k>', '<Esc>', { noremap = true })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
-vim.keymap.set('t', '<C-k>', '<C-\\><C-n>', { noremap = true })
+vim.keymap.set('i', '<C-k>', '<Esc>', { noremap = true, silent = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-q>', '<C-w>')
 
