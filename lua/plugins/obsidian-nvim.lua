@@ -8,10 +8,6 @@ return {
     opts = {
         workspaces = {
             {
-                name = "wtrce remastering",
-                path = "~/obsidian/wtrce-remastering",
-            },
-            {
                 name = "no-vault",
                 path = function()
                     -- alternatively use the CWD:

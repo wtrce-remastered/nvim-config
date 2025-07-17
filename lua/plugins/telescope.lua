@@ -10,6 +10,7 @@ return {
             vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>fd', builtin.lsp_document_symbols)
             vim.keymap.set('n', '<leader>fb', builtin.buffers)
+            vim.keymap.set('n', '<leader>ft', builtin.colorscheme)
 
             vim.keymap.set('n', '<leader>gr', builtin.lsp_references)
 
@@ -19,7 +20,6 @@ return {
             vim.keymap.set('n', '<leader>gy', builtin.lsp_type_definitions)
 
             vim.keymap.set('n', '<leader>ge', builtin.diagnostics)
-
         end
     },
     {
