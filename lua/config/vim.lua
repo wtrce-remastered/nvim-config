@@ -47,19 +47,7 @@ vim.keymap.set('i', '<C-k>', '<Esc>', { noremap = true })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 vim.keymap.set('t', '<C-k>', '<C-\\><C-n>', { noremap = true })
 
--- vim.keymap.set({ 'n', 's', 'v', 'o' }, 'j', "h", { noremap = true })
--- vim.keymap.set({ 'n', 'v', 's', 'o' }, 'k', 'j', { noremap = true })
--- vim.keymap.set({ 'n', 'v', 's', 'o' }, 'l', 'k', { noremap = true })
--- vim.keymap.set({ 'n', 's', 'v', 'o' }, ';', 'l', { noremap = true })
---
--- vim.keymap.set('v', 'K', ":m '>+1<CR>gv=gv")
--- vim.keymap.set('v', 'L', ":m '>-2<CR>gv=gv")
-
--- vim.keymap.set('n', '<C-d>', '<C-d>zz')
--- vim.keymap.set('n', '<C-u>', '<C-u>zz')
-
--- vim.keymap.set('n', 'n', 'nzzzv')
--- vim.keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set('n', '<C-q>', '<C-w>')
 
 vim.keymap.set('x', '<leader>p', "\"_dP")
 
