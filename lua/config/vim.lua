@@ -42,10 +42,11 @@ vim.keymap.set('i', '<C-b>', function() vim.api.nvim_feedkeys('"', 'i', true) en
 vim.keymap.set('i', '<C-r>', function() vim.api.nvim_feedkeys('|', 'i', true) end, { silent = true })
 
 vim.keymap.set('i', '<C-d>', function() vim.api.nvim_feedkeys('.', 'i', true) end, { silent = true })
+vim.keymap.set('i', '<C-s>', function() vim.api.nvim_feedkeys('/', 'i', true) end, { silent = true })
 
 -- others
 
-vim.keymap.set('n', '<C-f>', '<Nop>', { noremap = true })
+vim.keymap.set('n', '<leader>n', '_', { noremap = true })
 
 vim.keymap.set('n', 'H', ':bprevious<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', 'L', ':bnext<cr>', { noremap = true, silent = true })
