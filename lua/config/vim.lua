@@ -38,7 +38,6 @@ vim.keymap.set('n', 'H', ':bprevious<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', 'L', ':bnext<cr>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-h>', ':w<cr>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-g>', ':wq<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-n>', '_hvk$d')
@@ -97,3 +96,7 @@ vim.keymap.set('n', '<leader>gl', function() vim.diagnostic.open_float({ scope =
 vim.keymap.set('n', 'grlb', ':!gradle clean build<cr>')
 vim.keymap.set('n', 'grlpm', ':!gradle publishToMavenLocal<cr>')
 vim.keymap.set('n', 'grlpp', ':!gradle generateProto<cr>')
+
+-- typr
+
+vim.keymap.set('n', '<leader>xt', ':Typr<cr>')
