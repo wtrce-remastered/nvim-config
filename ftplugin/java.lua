@@ -111,6 +111,7 @@
 -- jdtls.start_or_attach(config)
 
 local home = vim.env.HOME
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
@@ -136,11 +137,11 @@ local config = {
         '-jar', home .. '/.local/share/nvim/mason/share/jdtls/plugins/org.eclipse.equinox.launcher.jar',
 
         -- 💀
-        '-configuration', home .. '/.local/share/nvim/mason/packages/jdtls/config_mac_arm',
+        '-configuration', home .. '/.local/share/nvim/mason/packages/jdtls/config_linux',
 
         -- 💀
         -- See `data directory configuration` section in the README
-        '-data', home .. '/.local/share/nvim/jdtls-workspace/'
+        '-data', home .. "/.local/share/nvim/jdtls-workspace/" .. project_name
     },
 
     root_dir = vim.fs.root(0, { "build.gradle" }),
