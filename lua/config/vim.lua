@@ -40,6 +40,7 @@ vim.keymap.set('i', '<C-f>', function() vim.api.nvim_feedkeys('!', 'i', true) en
 
 vim.keymap.set('i', '<C-b>', function() vim.api.nvim_feedkeys('"', 'i', true) end, { silent = true })
 vim.keymap.set('i', '<C-r>', function() vim.api.nvim_feedkeys('|', 'i', true) end, { silent = true })
+vim.keymap.set('i', '<C-v>', function() vim.api.nvim_feedkeys('#', 'i', true) end, { silent = true })
 
 vim.keymap.set('i', '<C-d>', function() vim.api.nvim_feedkeys('.', 'i', true) end, { silent = true })
 vim.keymap.set('i', '<C-s>', function() vim.api.nvim_feedkeys('/', 'i', true) end, { silent = true })
