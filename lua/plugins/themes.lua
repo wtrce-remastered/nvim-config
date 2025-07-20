@@ -20,7 +20,8 @@ return {
         'shaunsingh/nord.nvim',
         priority = 1000,
         config = function()
-            vim.cmd("colorscheme nord")
+            vim.g.nord_disable_background = true
+            require('nord').set()
 
             vim.api.nvim_set_hl(0, "CursorLineNR", { fg = "white" })
             vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
