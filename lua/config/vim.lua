@@ -47,6 +47,8 @@ vim.keymap.set('i', '<C-s>', function() vim.api.nvim_feedkeys('/', 'i', true) en
 
 -- others
 
+vim.keymap.set('n', '<C-o>', '/')
+
 vim.keymap.set('n', '<leader>n', '_', { noremap = true })
 
 vim.keymap.set('n', 'H', ':bprevious<cr>', { noremap = true, silent = true })
