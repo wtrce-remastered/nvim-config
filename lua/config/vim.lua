@@ -63,8 +63,8 @@ vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true, silent = true })
 
 vim.keymap.set('i', '<C-k>', '<Esc>', { noremap = true, silent = true })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
-vim.keymap.set('t', '<C-k>', '<C-\\><C-n>', { noremap = true, silent = true })
+-- vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+-- vim.keymap.set('t', '<C-k>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-q>', '<C-w>')
 
@@ -88,15 +88,6 @@ vim.keymap.set('n', '<C-w>l', '<C-w>L', { noremap = true, silent = true })
 vim.keymap.set('n', 'J', '4j')
 vim.keymap.set('n', 'K', '4k')
 
-vim.keymap.set('n', '<leader>w', ':close<CR>')
-
-vim.keymap.set('n', '<leader>t', function()
-    vim.cmd('belowright split | terminal')
-    local win = vim.api.nvim_get_current_win()
-    vim.api.nvim_win_set_height(win, 20)
-    vim.cmd('startinsert')
-end)
-
 -- lsp
 
 vim.keymap.set('n', '<leader>gi', '<cmd>lua vim.lsp.buf.hover()<CR>')
@@ -104,7 +95,7 @@ vim.keymap.set('n', '<leader>gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 vim.keymap.set('n', '<leader>rr', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set('n', '<leader>ga', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 
-vim.keymap.set("n", "<C-\\>", '<cmd>lua vim.lsp.buf.format()<cr>:w<cr>')
+vim.keymap.set("n", "<leader>ff", '<cmd>lua vim.lsp.buf.format()<cr>:w<cr>')
 
 vim.keymap.set('n', '<leader>gl', function() vim.diagnostic.open_float({ scope = 'cursor' }) end)
 
@@ -113,7 +104,3 @@ vim.keymap.set('n', '<leader>gl', function() vim.diagnostic.open_float({ scope =
 vim.keymap.set('n', 'grlb', ':!gradle clean build<cr>')
 vim.keymap.set('n', 'grlpm', ':!gradle publishToMavenLocal<cr>')
 vim.keymap.set('n', 'grlpp', ':!gradle generateProto<cr>')
-
--- typr
-
-vim.keymap.set('n', '<leader>xt', ':Typr<cr>')
