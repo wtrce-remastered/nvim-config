@@ -43,11 +43,10 @@ vim.keymap.set('i', '<C-r>', function() vim.api.nvim_feedkeys('|', 'i', true) en
 
 vim.keymap.set('i', '<C-v>', function() vim.api.nvim_feedkeys('#', 'i', true) end, { silent = true })
 vim.keymap.set('i', '<C-d>', function() vim.api.nvim_feedkeys('.', 'i', true) end, { silent = true })
+
 vim.keymap.set('i', '<C-s>', function() vim.api.nvim_feedkeys('/', 'i', true) end, { silent = true })
 
 -- others
-
-vim.keymap.set('n', '<C-o>', '/')
 
 vim.keymap.set('n', '<leader>n', '_', { noremap = true })
 
