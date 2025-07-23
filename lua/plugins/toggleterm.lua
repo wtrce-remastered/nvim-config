@@ -3,8 +3,8 @@ return {
     config = function()
         require("toggleterm").setup({
             size = 15,
-            persist_mode = true,
-            start_in_insert = true
+            start_in_insert = true,
+            persist_mode = true
         })
 
         vim.keymap.set("n", "<C-t>", ":ToggleTerm size=20 dir=$PWD direction=float<cr>", { silent = true })
