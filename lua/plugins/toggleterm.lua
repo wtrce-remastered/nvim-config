@@ -2,12 +2,12 @@ return {
     'akinsho/toggleterm.nvim',
     config = function()
         require("toggleterm").setup({
+            open_mapping = [[<c-t>]],
             size = 15,
             start_in_insert = true,
-            persist_mode = true
+            direction = "float"
         })
 
-        vim.keymap.set("n", "<C-t>", ":ToggleTerm size=20 dir=$PWD direction=float<cr>", { silent = true })
-        vim.keymap.set("t", "<C-t>", "<C-\\><C-n>:ToggleTerm size=20 dir=$PWD direction=float<cr>", { silent = true })
+        vim.keymap.set("n", "<C-t>", ":ToggleTerm<cr>", { silent = true })
     end
 }
