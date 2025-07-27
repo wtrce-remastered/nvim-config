@@ -12,11 +12,11 @@ return {
             vim.keymap.set('n', '<leader>fb', builtin.buffers)
             vim.keymap.set('n', '<leader>ft', builtin.colorscheme)
 
-            vim.keymap.set('n', 'gr', builtin.lsp_references)
+            vim.keymap.set('n', '<leader>gr', builtin.lsp_references)
 
             vim.keymap.set('n', 'gd', builtin.lsp_definitions)
             vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-            vim.keymap.set('n', 'gg', builtin.lsp_implementations)
+            vim.keymap.set('n', '<leader>gg', builtin.lsp_implementations)
             vim.keymap.set('n', 'gy', builtin.lsp_type_definitions)
 
             vim.keymap.set('n', 'ge', builtin.diagnostics)
