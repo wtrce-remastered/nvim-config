@@ -6,20 +6,16 @@ return {
         config = function()
             local builtin = require("telescope.builtin")
 
-            vim.keymap.set('n', '<C-j>', function() builtin.find_files({ previewer = false }) end, {})
-            vim.keymap.set('n', '<C-i>', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>fd', builtin.lsp_document_symbols)
-            vim.keymap.set('n', '<leader>fb', builtin.buffers)
-            vim.keymap.set('n', '<leader>ft', builtin.colorscheme)
+            vim.keymap.set('n', '<C-l>', function() builtin.find_files({ previewer = false }) end, {})
+            vim.keymap.set('n', '<leader>hg', builtin.live_grep, {})
+            vim.keymap.set('n', '<leader>hu', builtin.lsp_document_symbols)
+            vim.keymap.set('n', '<leader>hr', builtin.lsp_references)
 
-            vim.keymap.set('n', '<leader>gr', builtin.lsp_references)
+            vim.keymap.set('n', '<leader>ht', builtin.lsp_definitions)
+            vim.keymap.set('n', '<leader>hT', vim.lsp.buf.declaration)
+            vim.keymap.set('n', '<leader>hi', builtin.lsp_implementations)
 
-            vim.keymap.set('n', 'gd', builtin.lsp_definitions)
-            vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-            vim.keymap.set('n', '<leader>gg', builtin.lsp_implementations)
-            vim.keymap.set('n', 'gy', builtin.lsp_type_definitions)
-
-            vim.keymap.set('n', 'ge', builtin.diagnostics)
+            vim.keymap.set('n', '<leader>hD', builtin.diagnostics)
         end
     },
     {

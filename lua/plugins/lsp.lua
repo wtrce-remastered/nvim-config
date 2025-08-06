@@ -24,6 +24,11 @@ return {
                 lspconfig_defaults.capabilities,
                 require("cmp_nvim_lsp").default_capabilities()
             )
+
+            vim.keymap.set('n', '<leader>hi', '<cmd>lua vim.lsp.buf.hover()<CR>')
+            vim.keymap.set('n', '<leader>hR', '<cmd>lua vim.lsp.buf.rename()<CR>')
+            vim.keymap.set("n", "<leader>hb", '<cmd>lua vim.lsp.buf.format()<cr>:w<cr>')
+            vim.keymap.set('n', '<leader>hc', function() vim.diagnostic.open_float({ scope = 'cursor' }) end)
         end,
     },
     { "hrsh7th/cmp-nvim-lsp" },
