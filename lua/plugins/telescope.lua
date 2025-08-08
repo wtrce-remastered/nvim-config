@@ -47,13 +47,14 @@ return {
                             ['l'] = require('telescope.actions').select_default,
                         },
                         i = {
-                            ['<C-k>'] = function()
+                            ['<C-t>'] = function()
                                 vim.api.nvim_feedkeys(
                                     vim.api.nvim_replace_termcodes('<Esc>', true, false, true),
                                     'n',
                                     false
                                 )
                             end,
+                            ['<C-l>'] = require('telescope.actions').close
                         }
                     }
 
