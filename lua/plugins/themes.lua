@@ -1,30 +1,15 @@
 return {
-    -- {
-    --     'projekt0n/github-nvim-theme',
-    --     name = 'github-theme',
-    --     priority = 1000,
-    --     config = function()
-    --         require('github-theme').setup({
-    --             options = {
-    --                 transparent = false
-    --             }
-    --         })
-    --
-    --         vim.cmd("colorscheme github_dark")
-    --
-    --         vim.api.nvim_set_hl(0, "CursorLineNR", { fg = "white" })
-    --         vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
-    --     end,
-    -- }
     {
-        'shaunsingh/nord.nvim',
+        "gbprod/nord.nvim",
+        lazy = false,
         priority = 1000,
         config = function()
-            vim.g.nord_disable_background = true
-            require('nord').set()
+            require("nord").setup({
+                transparent = false,
+                borders = true,
+            })
 
-            vim.api.nvim_set_hl(0, "CursorLineNR", { fg = "white" })
-            vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
+            vim.cmd.colorscheme("nord")
         end,
     }
 }
