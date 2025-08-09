@@ -45,6 +45,7 @@ return {
                             ['j'] = require('telescope.actions').move_selection_next,
                             ['k'] = require('telescope.actions').move_selection_previous,
                             ['l'] = require('telescope.actions').select_default,
+                            ['<C-l>'] = require('telescope.actions').close
                         },
                         i = {
                             ['<C-t>'] = function()
