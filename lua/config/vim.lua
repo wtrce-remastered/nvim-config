@@ -28,8 +28,6 @@ vim.cmd('set textwidth=140')
 
 vim.cmd('set conceallevel=2')
 
-vim.opt.cursorline = true
-
 vim.keymap.set('n', '<leader>n', '_', { noremap = true })
 
 vim.keymap.set('n', 'H', ':bprevious<cr>', { noremap = true, silent = true })
