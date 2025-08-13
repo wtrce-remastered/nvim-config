@@ -10,12 +10,17 @@ return {
             vim.keymap.set('n', '<leader>hg', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>hu', builtin.lsp_document_symbols)
             vim.keymap.set('n', '<leader>hr', builtin.lsp_references)
-
             vim.keymap.set('n', '<leader>ht', builtin.lsp_definitions)
-            vim.keymap.set('n', '<leader>hT', vim.lsp.buf.declaration)
-            vim.keymap.set('n', '<leader>hi', builtin.lsp_implementations)
+            vim.keymap.set('n', '<leader>hI', builtin.lsp_implementations)
 
             vim.keymap.set('n', '<leader>hD', builtin.diagnostics)
+
+            vim.keymap.set('n', '<leader>ha', builtin.current_buffer_fuzzy_find)
+            vim.keymap.set('n', '<leader>hm', builtin.marks)
+
+            vim.keymap.set('n', '<leader>hgb', builtin.git_branches)
+            vim.keymap.set('n', '<leader>hgc', builtin.git_commits)
+            vim.keymap.set('n', '<leader>hgs', builtin.git_status)
         end
     },
     {
