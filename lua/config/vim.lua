@@ -41,7 +41,7 @@ vim.keymap.set('n', '<C-n>', '_hvk$d')
 vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true, silent = true })
 
-vim.keymap.set('i', '<C-t>', '<Esc>', { noremap = true, silent = true })
+vim.keymap.set({ 'i', 'v', 's' }, '<C-t>', '<Esc>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-q>', '<C-w>')
 
