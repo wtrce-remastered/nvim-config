@@ -45,6 +45,8 @@ vim.keymap.set({ 'i', 'v', 's' }, '<C-t>', '<Esc>', { noremap = true, silent = t
 
 vim.keymap.set('n', '<C-q>', '<C-w>')
 
+vim.keymap.set('v', '<C-c>', ':s/')
+
 vim.keymap.set('n', '<leader>t', 'f', { silent = true })
 vim.keymap.set('n', '<leader>T', 'F', { silent = true })
 
