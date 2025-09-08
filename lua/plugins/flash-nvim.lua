@@ -2,10 +2,8 @@ return {
     "folke/flash.nvim",
     event = "VeryLazy",
     opts = {
-        modes = {
-            char = {
-                keys = {},
-            }
+        label = {
+            exclude = "qjzkxwvzfgdyQJZKXWVZFGDY"
         }
     },
     keys = {

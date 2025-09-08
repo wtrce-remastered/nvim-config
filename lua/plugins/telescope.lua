@@ -7,11 +7,11 @@ return {
             local builtin = require("telescope.builtin")
 
             vim.keymap.set('n', '<C-l>', function() builtin.find_files({ previewer = false }) end, {})
-            vim.keymap.set('n', '<leader>hg', builtin.live_grep, {})
+            vim.keymap.set('n', '<leader>hE', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>hu', builtin.lsp_document_symbols)
             vim.keymap.set('n', '<leader>hr', builtin.lsp_references)
             vim.keymap.set('n', '<leader>ht', builtin.lsp_definitions)
-            vim.keymap.set('n', '<leader>hI', builtin.lsp_implementations)
+           vim.keymap.set('n', '<leader>hI', builtin.lsp_implementations)
 
             vim.keymap.set('n', '<leader>hD', builtin.diagnostics)
 
