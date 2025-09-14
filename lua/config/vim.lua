@@ -62,5 +62,5 @@ vim.keymap.set('n', '<Down>', ':wincmd j<CR>', { silent = true })
 vim.keymap.set('n', '<Up>', ':wincmd k<CR>', { silent = true })
 vim.keymap.set('n', '<Right>', ':wincmd l<CR>', { silent = true })
 
-vim.keymap.set('n', 'J', '4j')
-vim.keymap.set('n', 'K', '4k')
+vim.keymap.set('n', 'J', 'j')
+vim.keymap.set('n', 'K', 'k')
