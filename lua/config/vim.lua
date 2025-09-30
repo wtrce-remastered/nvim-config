@@ -36,8 +36,8 @@ vim.keymap.set('n', 'L', ':bnext<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-h>', ':w<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true, silent = true })
 
--- vim.keymap.set('n', 'J', '<C-Y>', { silent = true })
--- vim.keymap.set('n', 'K', '<C-y>', { silent = true })
+vim.keymap.set('n', 'J', '3<C-e>', { noremap = true, silent = true })
+vim.keymap.set('n', 'K', '3<C-y>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-n>', '_hvk$d')
 
@@ -47,7 +47,7 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true, silent = true })
 
-vim.keymap.set('n', 'S', '_v/{<C-m>%o', { silent = true })
+vim.keymap.set('n', 'S', '_V/{<C-m>%o', { silent = true })
 
 vim.keymap.set('n', '<leader>/', '/<C-r>0<cr>', { silent = true })
 vim.keymap.set('n', '<leader>?', '?<C-r>0<cr>', { silent = true })

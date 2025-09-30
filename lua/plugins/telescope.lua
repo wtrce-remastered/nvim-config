@@ -7,6 +7,11 @@ return {
             local builtin = require("telescope.builtin")
 
             vim.keymap.set('n', '<C-l>', function() builtin.find_files({ previewer = false }) end, {})
+
+            vim.keymap.set('n', '<leader>hl', function()
+                builtin.find_files({ previewer = false, default_text = vim.fn.getreg("0") })
+            end, {})
+
             vim.keymap.set('n', '<leader>hE', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>hu', builtin.lsp_document_symbols)
             vim.keymap.set('n', '<leader>hr', builtin.lsp_references)
@@ -46,20 +51,9 @@ return {
                     },
                     mappings = {
                         n = {
-                            ['h'] = require('telescope.actions').close,
-                            ['j'] = require('telescope.actions').move_selection_next,
-                            ['k'] = require('telescope.actions').move_selection_previous,
-                            ['l'] = require('telescope.actions').select_default,
                             ['<C-l>'] = require('telescope.actions').close
                         },
                         i = {
-                            ['<C-t>'] = function()
-                                vim.api.nvim_feedkeys(
-                                    vim.api.nvim_replace_termcodes('<Esc>', true, false, true),
-                                    'n',
-                                    false
-                                )
-                            end,
                             ['<C-l>'] = require('telescope.actions').close
                         }
                     }
