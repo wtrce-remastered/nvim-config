@@ -11,7 +11,7 @@ return {
             vim.keymap.set('n', '<leader>hu', builtin.lsp_document_symbols)
             vim.keymap.set('n', '<leader>hr', builtin.lsp_references)
             vim.keymap.set('n', '<leader>ht', builtin.lsp_definitions)
-           vim.keymap.set('n', '<leader>hI', builtin.lsp_implementations)
+            vim.keymap.set('n', '<leader>hI', builtin.lsp_implementations)
 
             vim.keymap.set('n', '<leader>hD', builtin.diagnostics)
 
