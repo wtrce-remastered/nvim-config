@@ -9,7 +9,7 @@ return {
             vim.keymap.set('n', '<C-l>', function() builtin.find_files({ previewer = false }) end, {})
 
             vim.keymap.set('n', '<leader>hl', function()
-                builtin.find_files({ previewer = false, default_text = vim.fn.getreg("0") })
+                builtin.find_files({ previewer = false, default_text = vim.fn.getreg("0"), initial_mode = "normal" })
             end, {})
 
             vim.keymap.set('n', '<leader>hE', builtin.live_grep, {})
