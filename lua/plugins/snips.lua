@@ -14,17 +14,17 @@ return {
             end
         end, { silent = true })
 
-        vim.keymap.set({ "i", "s" }, "<leader>ul", function()
+        vim.keymap.set({ "i", "s" }, "<C-c>", function()
             if ls.jumpable(1) then
                 ls.jump(1)
             end
         end, { silent = true })
 
-        vim.keymap.set({ "i", "s" }, "<leader>uh", function()
-            if ls.jumpable(-1) then
-                ls.jump(-1)
-            end
-        end, { silent = true })
+        -- vim.keymap.set({ "i", "s" }, "<leader>uh", function()
+        --     if ls.jumpable(-1) then
+        --         ls.jump(-1)
+        --     end
+        -- end, { silent = true })
 
         require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/lua/snippets" })
         ls.filetype_extend("typescriptreact", { "typescript" })
