@@ -21,6 +21,10 @@ return {
         keymaps = {
             show_help = "<f1>",
         },
+        yazi_floating_window_border = "none",
+        yazi_floating_window_zindex = nil,
+        floating_window = true,
+        floating_window_scaling_factor = 1
     },
     init = function()
         vim.g.loaded_netrwPlugin = 1
