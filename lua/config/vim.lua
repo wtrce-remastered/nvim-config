@@ -62,6 +62,10 @@ vim.keymap.set('n', '<leader>Y', "\"+Y")
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
 
+vim.keymap.set('n', '<leader>e', "'e")
+vim.keymap.set('n', '<leader>c', "'c")
+vim.keymap.set('n', '<leader>a', "'a")
+
 vim.keymap.set('n', '<Left>', ':wincmd h<CR>', { silent = true })
 vim.keymap.set('n', '<Down>', ':wincmd j<CR>', { silent = true })
 vim.keymap.set('n', '<Up>', ':wincmd k<CR>', { silent = true })
