@@ -45,8 +45,8 @@ return {
                     { name = "nvim_lsp" },
                 },
                 mapping = cmp.mapping.preset.insert({
-                    ["<C-i>"] = cmp.mapping.complete({}),
-                    ["<Tab>"] = cmp.mapping(function(fallback)
+                    ["<C-c>"] = cmp.mapping.complete({}),
+                    ["<C-i>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             if cmp.get_selected_entry() ~= nil then
                                 cmp.mapping.confirm({
