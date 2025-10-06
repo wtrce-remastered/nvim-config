@@ -55,9 +55,6 @@ vim.keymap.set('n', '<leader>?', '?<C-r>0<cr>', { silent = true })
 vim.keymap.set('v', '<C-c>', ':s/')
 vim.keymap.set('v', '<leader><C-c>', ':s/<C-r>0/')
 
-vim.keymap.set('n', '<leader>t', 'f', { silent = true })
-vim.keymap.set('n', '<leader>T', 'F', { silent = true })
-
 vim.keymap.set('x', '<leader>p', "\"_dP")
 
 vim.keymap.set({ 'n', 'v' }, '<leader>y', "\"+y")
