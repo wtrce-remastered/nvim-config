@@ -70,4 +70,12 @@ return {
             $0
         }, [$1])
     ]]),
+
+    ls.parser.parse_snippet("el", [[
+        <$1$0>$2</$1>
+    ]]),
+
+    ls.parser.parse_snippet("sel", [[
+        <$0 />
+    ]]),
 }
