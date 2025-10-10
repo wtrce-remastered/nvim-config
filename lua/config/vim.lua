@@ -39,10 +39,10 @@ vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', 'J', '3<C-e>', { noremap = true, silent = true })
 vim.keymap.set('n', 'K', '3<C-y>', { noremap = true, silent = true })
 
-vim.keymap.set('n', '<C-n>', '_hvk$d')
+vim.keymap.set('n', '<C-u>', '20<C-y>')
+vim.keymap.set('n', '<C-d>', '20<C-e>')
 
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-n>', '_hvk$d')
 
 vim.keymap.set('n', '<leader>o', 'o<esc>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true, silent = true })
