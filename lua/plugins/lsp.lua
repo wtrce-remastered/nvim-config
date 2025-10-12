@@ -32,6 +32,7 @@ return {
             vim.keymap.set("n", "<leader>hm", '<cmd>lua require("jdtls").organize_imports()<cr>')
             vim.keymap.set("n", "<leader>ho", '<cmd>lua vim.lsp.buf.code_action()<cr>')
             vim.keymap.set('n', '<leader>hc', function() vim.diagnostic.open_float({ scope = 'cursor' }) end)
+            vim.keymap.set('n', '<leader>hI', '<cmd>lua vim.lsp.buf.hover()<cr>')
         end,
     },
     { "hrsh7th/cmp-nvim-lsp" },
