@@ -11,17 +11,24 @@ return {
 
     ls.parser.parse_snippet("ifr", [[
         if ($1) {
-            return$2;
+            return$0;
         }
     ]]),
 
     ls.parser.parse_snippet("mth", [[
-        ${1:privacy} ${2:name}(${3:arguments}) {
+        ${1} (${3:arguments}) {
             $0
         }
     ]]),
 
     ls.parser.parse_snippet("tc", [[
+        try {
+            $0
+        } catch (Exception exception) {
+        }
+    ]]),
+
+    ls.parser.parse_snippet("", [[
         try {
             $0
         } catch (Exception exception) {
