@@ -1,30 +1,13 @@
 return {
-    "slugbyte/lackluster.nvim",
+    "gbprod/nord.nvim",
     lazy = false,
     priority = 1000,
-    init = function()
-        local lackluster = require("lackluster")
-
-        lackluster.setup({
-            tweak_background = {
-                normal = 'none'
-            }
+    config = function()
+        require("nord").setup({
+            transparent = true,
+            borders = true,
         })
 
-        vim.cmd.colorscheme("lackluster-hack")
-    end
+        vim.cmd.colorscheme("nord")
+    end,
 }
-
--- return {
---     "gbprod/nord.nvim",
---     lazy = false,
---     priority = 1000,
---     config = function()
---         require("nord").setup({
---             transparent = true,
---             borders = true,
---         })
---
---         vim.cmd.colorscheme("nord")
---     end,
--- }

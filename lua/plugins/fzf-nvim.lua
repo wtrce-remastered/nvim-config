@@ -17,7 +17,7 @@ return {
             }
         })
 
-        vim.keymap.set('n', '<C-l>', fzf.files)
+        vim.keymap.set('n', '<C-n>', fzf.files)
 
         vim.keymap.set('n', '<leader>hl', function()
             fzf.files({ fzf_opts = { ["--query"] = vim.fn.getreg("0") } })
