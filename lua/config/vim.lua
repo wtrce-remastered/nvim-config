@@ -72,3 +72,12 @@ vim.keymap.set('n', '<Left>', ':wincmd h<CR>', { silent = true })
 vim.keymap.set('n', '<Down>', ':wincmd j<CR>', { silent = true })
 vim.keymap.set('n', '<Up>', ':wincmd k<CR>', { silent = true })
 vim.keymap.set('n', '<Right>', ':wincmd l<CR>', { silent = true })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "*.query.sql",
+    callback = function()
+        local sql_file = vim.fn.expand("%")
+        local result_file = "/tmp/nvim-sql-console-out"
+        vim.fn.system('psql "$PGURL" -f ' .. sql_file .. ' > ' .. result_file .. ' 2>&1')
+    end
+})
