@@ -41,7 +41,7 @@ vim.keymap.set('n', '<C-y>', ':q!<cr>', { noremap = true, silent = true })
 vim.keymap.set('n', 'J', '3<C-e>', { noremap = true, silent = true })
 vim.keymap.set('n', 'K', '3<C-y>', { noremap = true, silent = true })
 
-vim.keymap.set('i', '<C-t>', '<C-r>0', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-t>', '<C-r>"', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-u>', '15<C-y>')
 vim.keymap.set('n', '<C-d>', '15<C-e>')
