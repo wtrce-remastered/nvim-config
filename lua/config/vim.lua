@@ -51,8 +51,9 @@ vim.keymap.set('n', '<leader>O', 'O<esc>', { noremap = true, silent = true })
 
 vim.keymap.set('n', 'S', '_V/{<C-m>%o', { silent = true })
 
-vim.keymap.set('n', '<leader>rp', '"kp')
-vim.keymap.set('n', '<leader>ry', '_"ky$')
+vim.keymap.set('n', '<C-k>', '@k')
+vim.keymap.set('v', '<C-k>', '"ky')
+vim.keymap.set('v', '<leader>rp', '"kp')
 
 vim.keymap.set('n', '<leader>/', '/<C-r>0<cr>', { silent = true })
 vim.keymap.set('n', '<leader>?', '?<C-r>0<cr>', { silent = true })

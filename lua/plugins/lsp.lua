@@ -87,7 +87,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 automatic_enable = true,
-                ensure_installed = { "lua_ls", "jdtls", "clangd" }
+                ensure_installed = { "lua_ls", "clangd" }
             })
         end,
     },
