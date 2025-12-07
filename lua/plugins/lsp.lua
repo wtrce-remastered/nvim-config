@@ -3,19 +3,7 @@ return {
         "neovim/nvim-lspconfig",
         event = "VeryLazy",
         dependencies = {
-            {
-                "saghen/blink.cmp",
-                "j-hui/fidget.nvim",
-                config = function()
-                    require("fidget").setup({
-                        notification = {
-                            window = {
-                                winblend = 0
-                            }
-                        }
-                    })
-                end
-            },
+            { "saghen/blink.cmp" },
             { "folke/neodev.nvim", opts = {} },
         },
         config = function()
@@ -45,7 +33,10 @@ return {
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
         opts = {
-            keymap = { preset = 'default' },
+            keymap = {
+                preset = 'default',
+                ['<CR>'] = { 'accept', 'fallback' }
+            },
             signature = { enabled = true },
             appearance = {
                 nerd_font_variant = 'mono'
@@ -54,8 +45,7 @@ return {
                 documentation = { auto_show = true },
                 list = {
                     selection = {
-                        preselect = false,
-                        auto_select = false
+                        preselect = false
                     }
                 }
             },
@@ -66,47 +56,6 @@ return {
         },
         opts_extend = { "sources.default" }
     },
-    -- { "hrsh7th/cmp-nvim-lsp" },
-    -- {
-    --     "hrsh7th/nvim-cmp",
-    --     config = function()
-    --         local cmp = require("cmp")
-    --
-    --         cmp.setup({
-    --             sources = {
-    --                 { name = "nvim_lsp" },
-    --             },
-    --             mapping = cmp.mapping.preset.insert({
-    --                 ["<C-c>"] = cmp.mapping.complete({}),
-    --                 ["<C-i>"] = cmp.mapping(function(fallback)
-    --                     if cmp.visible() then
-    --                         if cmp.get_selected_entry() ~= nil then
-    --                             cmp.mapping.confirm({
-    --                                 behavior = cmp.ConfirmBehavior.Replace,
-    --                             })
-    --                         else
-    --                             cmp.select_next_item()
-    --                             cmp.mapping.confirm({
-    --                                 behavior = cmp.ConfirmBehavior.Replace,
-    --                             })
-    --                         end
-    --                     else
-    --                         fallback()
-    --                     end
-    --                 end, { "i", "s" }),
-    --                 ["<CR>"] = cmp.mapping.confirm({
-    --                     behavior = cmp.ConfirmBehavior.Replace,
-    --                     select = true,
-    --                 }),
-    --             }),
-    --             snippet = {
-    --                 expand = function(args)
-    --                     vim.snippet.expand(args.body)
-    --                 end,
-    --             },
-    --         })
-    --     end,
-    -- },
     {
         "williamboman/mason.nvim",
         config = function()
