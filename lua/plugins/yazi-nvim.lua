@@ -7,20 +7,17 @@ return {
     },
     keys = {
         {
-            "<leader>lu",
+            "<leader>yo",
             mode = { "n" },
             "<cmd>Yazi<cr>"
         },
         {
-            "<leader>lo",
+            "<leader>ys",
             "<cmd>Yazi cwd<cr>"
         },
     },
     opts = {
         open_for_directories = false,
-        keymaps = {
-            show_help = "<f1>",
-        },
         yazi_floating_window_border = "none",
         yazi_floating_window_zindex = nil,
         floating_window = true,

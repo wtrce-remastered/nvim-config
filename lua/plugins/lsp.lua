@@ -17,12 +17,12 @@ return {
                 capabilities
             )
 
-            vim.keymap.set('n', '<leader>hR', '<cmd>lua vim.lsp.buf.rename()<CR>')
-            vim.keymap.set("n", "<leader>hb", '<cmd>lua vim.lsp.buf.format()<cr>:w<cr>')
-            vim.keymap.set("n", "<leader>hm", '<cmd>lua require("jdtls").organize_imports()<cr>')
-            vim.keymap.set("n", "<leader>ho", '<cmd>lua vim.lsp.buf.code_action()<cr>')
-            vim.keymap.set('n', '<leader>hc', function() vim.diagnostic.open_float({ scope = 'cursor' }) end)
-            vim.keymap.set('n', '<leader>hI', '<cmd>lua vim.lsp.buf.hover()<cr>')
+            vim.keymap.set('n', '<leader>lR', '<cmd>lua vim.lsp.buf.rename()<CR>')
+            vim.keymap.set("n", "<leader>lf", '<cmd>lua vim.lsp.buf.format()<cr>:w<cr>')
+            vim.keymap.set("n", "<leader>lm", '<cmd>lua require("jdtls").organize_imports()<cr>')
+            vim.keymap.set("n", "<leader>la", '<cmd>lua vim.lsp.buf.code_action()<cr>')
+            vim.keymap.set('n', '<leader>li', function() vim.diagnostic.open_float({ scope = 'cursor' }) end)
+            vim.keymap.set('n', '<leader>lI', '<cmd>lua vim.lsp.buf.hover()<cr>')
         end,
     },
     {
