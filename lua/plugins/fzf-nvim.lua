@@ -14,6 +14,9 @@ return {
                 preview = {
                     border = "none"
                 }
+            },
+            files = {
+                fd_opts = [[--color=never --hidden --type f --type l --E .git --E **/*.class --E **/*.classpath --E **/*.project]]
             }
         })
 
