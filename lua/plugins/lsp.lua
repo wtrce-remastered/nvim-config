@@ -17,7 +17,7 @@ return {
                 capabilities
             )
 
-            vim.keymap.set("n", "<leader>lR", ":LspRestart", { silent = true })
+            vim.keymap.set("n", "<leader>lR", ":LspRestart<cr>", { silent = true })
 
             vim.keymap.set('n', '<leader>lr', ':lua vim.lsp.buf.rename()<CR>')
             vim.keymap.set("n", "<leader>lf", ':lua vim.lsp.buf.format()<cr>:w<cr>')
