@@ -35,22 +35,5 @@ return {
         vim.keymap.set('n', '<leader>fD', fzf.lsp_document_diagnostics)
 
         vim.keymap.set('n', '<leader>fs', fzf.resume)
-
-        local harpoon = require('harpoon')
-
-        local function toggle_fzf(harpoon_files)
-            local file_paths = {}
-            for _, item in ipairs(harpoon_files.items) do
-                table.insert(file_paths, item.value)
-            end
-
-            require("fzf-lua").fzf_exec(file_paths, {
-                prompt = "Harpoon> ",
-                actions = require("fzf-lua").defaults.actions.files,
-                previewer = "builtin",
-            })
-        end
-
-        vim.keymap.set("n", "<C-h>", function() toggle_fzf(harpoon:list()) end)
     end
 }
