@@ -37,7 +37,9 @@ return {
         opts = {
             keymap = {
                 preset = 'default',
-                ['<CR>'] = { 'accept', 'fallback' }
+
+                ['<C-n>'] = { 'select_next', 'show', 'fallback' },
+                ['<CR>'] = { 'accept', 'select_and_accept', 'fallback' }
             },
             signature = { enabled = true },
             appearance = {

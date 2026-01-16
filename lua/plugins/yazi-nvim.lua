@@ -9,11 +9,11 @@ return {
         {
             "<C-y>",
             mode = { "n" },
-            "<cmd>Yazi<cr>"
+            ":Yazi<cr>"
         },
         {
             "<leader>yr",
-            "<cmd>Yazi cwd<cr>"
+            ":Yazi cwd<cr>"
         },
     },
     opts = {
