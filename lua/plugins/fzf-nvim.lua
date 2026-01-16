@@ -29,6 +29,7 @@ return {
         vim.keymap.set('n', '<leader>fb', fzf.builtin)
 
         vim.keymap.set('n', '<leader>fg', fzf.live_grep)
+        vim.keymap.set('n', '<leader>fl', fzf.lines)
         vim.keymap.set('n', '<leader>fr', fzf.lsp_references)
         vim.keymap.set('n', '<leader>fd', fzf.lsp_definitions)
         vim.keymap.set('n', '<leader>fi', fzf.lsp_implementations)
