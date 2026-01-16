@@ -7,12 +7,12 @@ return {
     },
     keys = {
         {
-            "<leader>yo",
+            "<C-y>",
             mode = { "n" },
             "<cmd>Yazi<cr>"
         },
         {
-            "<leader>ys",
+            "<leader>yr",
             "<cmd>Yazi cwd<cr>"
         },
     },
