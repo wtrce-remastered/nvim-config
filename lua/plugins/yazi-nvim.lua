@@ -17,10 +17,10 @@ return {
         },
     },
     opts = {
-        open_for_directories = false,
+        open_for_directories = true,
         yazi_floating_window_border = "none",
         yazi_floating_window_zindex = nil,
-        floating_window = true,
+        floating_window = false,
         floating_window_scaling_factor = 1
     },
     init = function()
