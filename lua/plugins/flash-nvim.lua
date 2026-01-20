@@ -8,7 +8,7 @@ return {
             }
         },
         label = {
-            exclude = "qjzkxwvzfgdyQJZKXWVZFGDY"
+            exclude = "zxcvvbpoqwertyuZXCVVBPOQWERTYU"
         },
         highlight = {
             backdrop = false
