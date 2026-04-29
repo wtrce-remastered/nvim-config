@@ -30,7 +30,7 @@ return {
 
         vim.keymap.set('n', '<C-g>', fzf.lsp_definitions)
         vim.keymap.set('n', '<leader>fg', fzf.live_grep)
-        vim.keymap.set('n', '<leader>fl', fzf.blines)
+        vim.keymap.set('n', '<C-/>', fzf.blines)
         vim.keymap.set('n', '<leader>fr', fzf.lsp_references)
         vim.keymap.set('n', '<leader>fi', fzf.lsp_implementations)
         vim.keymap.set('n', '<leader>fz', fzf.lsp_live_workspace_symbols)
