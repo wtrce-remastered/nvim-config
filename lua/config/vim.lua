@@ -28,6 +28,8 @@ vim.cmd('set textwidth=140')
 
 vim.cmd('set conceallevel=2')
 
+vim.keymap.set('n', '<C-t>', '<C-i>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<C-p>', ':e #<cr>', { noremap = true, silent = true })
 
 vim.keymap.set('n', '<C-j>', ':w<cr>', { noremap = true, silent = true })
@@ -59,6 +61,9 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', "\"+y")
 vim.keymap.set('n', '<leader>Y', "\"+Y")
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
+
+vim.keymap.set("n", "j", [[v:count > 5 ? "m'" . v:count . 'j' : 'gj']], { noremap = true, expr = true })
+vim.keymap.set("n", "k", [[v:count > 5 ? "m'" . v:count . 'k' : 'gk']], { noremap = true, expr = true })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = "*.query.sql",
