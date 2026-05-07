@@ -1,7 +1,7 @@
 return {
     "ibhagwan/fzf-lua",
     dependencies = {
-        { "ThePrimeagen/harpoon" },
+        { "ThePrimeagen/harpoon", "nvim-mini/mini.nvim" },
     },
     config = function()
         local fzf = require("fzf-lua")
