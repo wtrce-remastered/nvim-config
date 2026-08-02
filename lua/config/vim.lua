@@ -64,24 +64,3 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
 
 vim.keymap.set("n", "j", [[v:count > 5 ? "m'" . v:count . 'j' : 'gj']], { noremap = true, expr = true })
 vim.keymap.set("n", "k", [[v:count > 5 ? "m'" . v:count . 'k' : 'gk']], { noremap = true, expr = true })
-
-vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = "*.query.sql",
-    callback = function()
-        local sql_file = vim.fn.expand("%")
-        local result_file = "/tmp/nvim-sql-console-out"
-        vim.fn.system('psql "$PGURL" -f ' .. sql_file .. ' > ' .. result_file .. ' 2>&1')
-    end
-})
-
-vim.g.clipboard = {
-    name = 'OSC 52',
-    copy = {
-        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
-    },
-    paste = {
-        ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-        ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
-    },
-}
